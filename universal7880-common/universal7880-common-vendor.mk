@@ -68,7 +68,6 @@ PRODUCT_PACKAGES += \
     libegis_fp_normal_sensor_test \
     libengmode_client \
     libgf_in_system_lib \
-    libprotobuf-cpp-full-3.9.1 \
     libqfp_sensortest \
     libril \
     libsec-ril-dsds \
