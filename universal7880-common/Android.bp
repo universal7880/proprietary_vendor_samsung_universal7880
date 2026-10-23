@@ -8,25 +8,824 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsecril-client",
-    vendor: true,
-    compile_multilib: "both",
+    name: "camera.vendor.exynos5",
+    owner: "samsung",
     strip: {
         none: true,
     },
-    stl: "none",
-    shared_libs: [
-        "liblog",
-        "libcutils",
-        "libhardware_legacy",
-        "libc++",
-    ],
+    target: {
+        android_arm: {
+            srcs: ["proprietary//lib/hw/camera.vendor.exynos5.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary//lib64/hw/camera.vendor.exynos5.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    relative_install_path: "hw",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libexynoscamera",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary//lib/libexynoscamera.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary//lib64/libexynoscamera.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libexynoscamera3",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary//lib/libexynoscamera3.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary//lib64/libexynoscamera3.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libfloatingfeature",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary//lib/libfloatingfeature.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary//lib64/libfloatingfeature.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libhwjpeg_blob",
+    stem: "libhwjpeg",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary//lib/libhwjpeg.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary//lib64/libhwjpeg.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsecnativefeature_system",
+    stem: "libsecnativefeature",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary//lib/libsecnativefeature.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary//lib64/libsecnativefeature.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsensorlistener",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary//lib/libsensorlistener.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary//lib64/libsensorlistener.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libuniapi",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary//lib/libuniapi.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary//lib64/libuniapi.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libuniplugin",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary//lib/libuniplugin.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary//lib64/libuniplugin.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libtfa98xx",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary//lib/libtfa98xx.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libGLES_mali",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/egl/libGLES_mali.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/egl/libGLES_mali.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    relative_install_path: "egl",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libMcClient",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libMcClient.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libMcClient.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libMcRegistry",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libMcRegistry.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libMcRegistry.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbauthserver",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libbauthserver.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libbauthserver.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbauthtzcommon",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libbauthtzcommon.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libbauthtzcommon.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libegis_fp_normal_sensor_test",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libegis_fp_normal_sensor_test.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libegis_fp_normal_sensor_test.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libengmode_client",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libengmode_client.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libengmode_client.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgf_in_system_lib",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libgf_in_system_lib.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libgf_in_system_lib.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libprotobuf-cpp-full-3.9.1",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libprotobuf-cpp-full-3.9.1.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libprotobuf-cpp-full-3.9.1.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqfp_sensortest",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libqfp_sensortest.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libqfp_sensortest.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libril",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libril.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libril.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsec-ril-dsds",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libsec-ril-dsds.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libsec-ril-dsds.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsec-ril",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libsec-ril.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libsec-ril.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsec_semRil",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libsec_semRil.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libsec_semRil.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsecnativefeature",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libsecnativefeature.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libsecnativefeature.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsecril-client",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
     target: {
         android_arm: {
             srcs: ["proprietary/vendor/lib/libsecril-client.so"],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libhardware_legacy",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/libsecril-client.so"],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libhardware_legacy",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
         },
     },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsemnativecarrierfeature",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libsemnativecarrierfeature.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libsemnativecarrierfeature.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsynaFpSensorTestNwd",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libsynaFpSensorTestNwd.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libsynaFpSensorTestNwd.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvkmanager_vendor",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libvkmanager_vendor.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libvkmanager_vendor.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwrappergps",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libwrappergps.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libwrappergps.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.radio.bridge@2.0",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.radio.channel@2.0",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "liboemcrypto",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/liboemcrypto.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwvhidl",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libwvhidl.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwvdrmengine",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/mediadrm/libwvdrmengine.so"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    relative_install_path: "mediadrm",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "gps.default",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/hw/gps.default.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaptX_encoder",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/product/lib64/libaptX_encoder.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    product_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "cbd",
+    owner: "samsung",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/cbd"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "android.hardware.drm@1.1-service.widevine",
+    owner: "samsung",
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/bin/hw/android.hardware.drm@1.1-service.widevine"],
+        },
+    },
+    compile_multilib: "32",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "gpsd",
+    owner: "samsung",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/hw/gpsd"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "rild",
+    owner: "samsung",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/hw/rild"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "mcDriverDaemon",
+    owner: "samsung",
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/bin/mcDriverDaemon"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
 }
