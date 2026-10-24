@@ -4,7 +4,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter universal7880,$(TARGET_DEVICE)),)
+ifeq ($(TARGET_DEVICE),universal7880)
 
 include $(CLEAR_VARS)
 
