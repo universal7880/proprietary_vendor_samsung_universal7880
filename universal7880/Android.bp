@@ -182,22 +182,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libtfa98xx",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: ["proprietary//lib/libtfa98xx.so"],
-        },
-    },
-    compile_multilib: "32",
-    check_elf_files: false,
-    prefer: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libGLES_mali",
     owner: "samsung",
     strip: {

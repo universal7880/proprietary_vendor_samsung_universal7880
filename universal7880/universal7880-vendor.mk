@@ -59,7 +59,6 @@ PRODUCT_PACKAGES += \
     libsensorlistener \
     libuniapi \
     libuniplugin \
-    libtfa98xx \
     libGLES_mali \
     libMcClient \
     libMcRegistry \
