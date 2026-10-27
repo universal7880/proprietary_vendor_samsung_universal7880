@@ -84,7 +84,6 @@ PRODUCT_PACKAGES += \
     libwvhidl \
     libwvdrmengine \
     gps.default \
-    libaptX_encoder \
     cbd \
     android.hardware.drm@1.1-service.widevine \
     gpsd \
