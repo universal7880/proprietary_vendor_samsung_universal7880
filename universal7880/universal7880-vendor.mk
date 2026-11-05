@@ -53,7 +53,6 @@ PRODUCT_PACKAGES += \
     camera.vendor.exynos5 \
     libexynoscamera \
     libexynoscamera3 \
-    libfloatingfeature \
     libhwjpeg_blob \
     libsecnativefeature_system \
     libsensorlistener \
@@ -66,6 +65,7 @@ PRODUCT_PACKAGES += \
     libbauthtzcommon \
     libegis_fp_normal_sensor_test \
     libengmode_client \
+    libfloatingfeature \
     libgf_in_system_lib \
     libqfp_sensortest \
     libril \
