@@ -60,6 +60,7 @@ PRODUCT_PACKAGES += \
     libuniapi \
     libuniplugin \
     libGLES_mali \
+    gatekeeper.exynos7880 \
     libMcClient \
     libMcRegistry \
     libbauthserver \
