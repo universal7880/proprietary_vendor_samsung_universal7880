@@ -8,161 +8,6 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
-    name: "camera.vendor.exynos5",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: ["proprietary//lib/hw/camera.vendor.exynos5.so"],
-        },
-        android_arm64: {
-            srcs: ["proprietary//lib64/hw/camera.vendor.exynos5.so"],
-        },
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    relative_install_path: "hw",
-    prefer: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libexynoscamera",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: ["proprietary//lib/libexynoscamera.so"],
-        },
-        android_arm64: {
-            srcs: ["proprietary//lib64/libexynoscamera.so"],
-        },
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libexynoscamera3",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: ["proprietary//lib/libexynoscamera3.so"],
-        },
-        android_arm64: {
-            srcs: ["proprietary//lib64/libexynoscamera3.so"],
-        },
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libhwjpeg_blob",
-    stem: "libhwjpeg",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: ["proprietary//lib/libhwjpeg.so"],
-        },
-        android_arm64: {
-            srcs: ["proprietary//lib64/libhwjpeg.so"],
-        },
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libsecnativefeature_system",
-    stem: "libsecnativefeature",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: ["proprietary//lib/libsecnativefeature.so"],
-        },
-        android_arm64: {
-            srcs: ["proprietary//lib64/libsecnativefeature.so"],
-        },
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libsensorlistener",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: ["proprietary//lib/libsensorlistener.so"],
-        },
-        android_arm64: {
-            srcs: ["proprietary//lib64/libsensorlistener.so"],
-        },
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libuniapi",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: ["proprietary//lib/libuniapi.so"],
-        },
-        android_arm64: {
-            srcs: ["proprietary//lib64/libuniapi.so"],
-        },
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libuniplugin",
-    owner: "samsung",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: ["proprietary//lib/libuniplugin.so"],
-        },
-        android_arm64: {
-            srcs: ["proprietary//lib64/libuniplugin.so"],
-        },
-    },
-    compile_multilib: "both",
-    check_elf_files: false,
-    prefer: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libGLES_mali",
     owner: "samsung",
     strip: {
@@ -179,6 +24,27 @@ cc_prebuilt_library_shared {
     compile_multilib: "both",
     check_elf_files: false,
     relative_install_path: "egl",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "camera.vendor.exynos5",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/hw/camera.vendor.exynos5.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/hw/camera.vendor.exynos5.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    relative_install_path: "hw",
     prefer: true,
     soc_specific: true,
 }
@@ -264,6 +130,26 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libcamjpg",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libcamjpg.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcamjpg.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libegis_fp_normal_sensor_test",
     owner: "samsung",
     strip: {
@@ -295,6 +181,46 @@ cc_prebuilt_library_shared {
         },
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/libengmode_client.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libexynoscamera",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libexynoscamera.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libexynoscamera.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libexynoscamera3",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libexynoscamera3.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libexynoscamera3.so"],
         },
     },
     compile_multilib: "both",
@@ -534,6 +460,26 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libsensorlistener",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libsensorlistener.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libsensorlistener.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libsynaFpSensorTestNwd",
     owner: "samsung",
     strip: {
@@ -545,6 +491,46 @@ cc_prebuilt_library_shared {
         },
         android_arm64: {
             srcs: ["proprietary/vendor/lib64/libsynaFpSensorTestNwd.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libuniapi",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libuniapi.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libuniapi.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libuniplugin",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libuniplugin.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libuniplugin.so"],
         },
     },
     compile_multilib: "both",

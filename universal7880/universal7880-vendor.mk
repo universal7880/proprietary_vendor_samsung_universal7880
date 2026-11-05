@@ -50,21 +50,17 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal7880/proprietary/vendor/firmware/setfile_3p8_front.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/setfile_3p8_front.bin
 
 PRODUCT_PACKAGES += \
-    camera.vendor.exynos5 \
-    libexynoscamera \
-    libexynoscamera3 \
-    libhwjpeg_blob \
-    libsecnativefeature_system \
-    libsensorlistener \
-    libuniapi \
-    libuniplugin \
     libGLES_mali \
+    camera.vendor.exynos5 \
     libMcClient \
     libMcRegistry \
     libbauthserver \
     libbauthtzcommon \
+    libcamjpg \
     libegis_fp_normal_sensor_test \
     libengmode_client \
+    libexynoscamera \
+    libexynoscamera3 \
     libfloatingfeature \
     libgf_in_system_lib \
     libqfp_sensortest \
@@ -75,7 +71,10 @@ PRODUCT_PACKAGES += \
     libsecnativefeature \
     libsecril-client \
     libsemnativecarrierfeature \
+    libsensorlistener \
     libsynaFpSensorTestNwd \
+    libuniapi \
+    libuniplugin \
     libvkmanager_vendor \
     libwrappergps \
     vendor.samsung.hardware.radio.bridge@2.0 \
