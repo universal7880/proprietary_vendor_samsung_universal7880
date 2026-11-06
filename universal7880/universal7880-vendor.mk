@@ -56,7 +56,6 @@ PRODUCT_PACKAGES += \
     libMcRegistry \
     libbauthserver \
     libbauthtzcommon \
-    libcamjpg \
     libegis_fp_normal_sensor_test \
     libengmode_client \
     libexynoscamera \
