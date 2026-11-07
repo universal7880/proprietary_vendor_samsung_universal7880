@@ -70,7 +70,6 @@ PRODUCT_PACKAGES += \
     libsecnativefeature \
     libsecril-client \
     libsemnativecarrierfeature \
-    libsensorlistener \
     libsynaFpSensorTestNwd \
     libuniapi \
     libuniplugin \
