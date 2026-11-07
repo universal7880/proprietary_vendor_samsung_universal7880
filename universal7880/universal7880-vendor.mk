@@ -79,11 +79,9 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.radio.bridge@2.0 \
     vendor.samsung.hardware.radio.channel@2.0 \
     liboemcrypto \
-    libwvhidl \
     libwvdrmengine \
     gps.default \
     cbd \
-    android.hardware.drm@1.1-service.widevine \
     gpsd \
     rild \
     mcDriverDaemon
